@@ -9,7 +9,7 @@ We do not need the netstat capabilities, and as for the FPS, we do it manually t
 
 As for the reason why FPS is not being measured, is because it cannot actually measure it. Initially we want to use SurfaceFlinger dump to get the data from the rendered surface. But, as of Android 8, this dump has been protected and cannot be measured unless we actually root the phone.
 
-You can see it being documented here _very implicitly_ in this repo: https://github.com/alibaba/mobileperf/blob/master/mobileperf/android/fps.py. On method \_collector_thread, in Chinese.
+You can see it being documented here _very implicitly_ in this repo: https://github.com/alibaba/mobileperf/blob/master/mobileperf/android/fps.py. On method `_collector_thread`, in Chinese.
 
 Alternatively, you can use `dumpsys gfxinfo` to measure the frames that are rendered by your app. But, for this thesis, we need to measure Google Chrome's frame. Unfortunately, there are no useful data when we do `dumpsys gfxinfo` to Google Chrome.
 
