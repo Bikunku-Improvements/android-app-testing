@@ -9,7 +9,7 @@ We do not need the netstat capabilities, and as for the FPS, we do it manually t
 
 As for the reason why FPS is not being measured, is because it cannot actually measure it. Initially we want to use SurfaceFlinger dump to get the data from the rendered surface. But, as of Android 8, this dump has been protected and cannot be measured unless we actually root the phone.
 
-You can see it being documented here _very implicitly_ in this repo: https://github.com/alibaba/mobileperf/blob/master/mobileperf/android/fps.py. On method `_collector_thread`, you can see that if you translate it to English from Chinese, you get:
+You can see it being documented here _very implicitly_ in this repo: https://github.com/alibaba/mobileperf/blob/master/mobileperf/android/fps.py on method `_collector_thread`, you can see that if you translate it to English from Chinese, you get:
 
 ```
 Collect surfaceflinger data
